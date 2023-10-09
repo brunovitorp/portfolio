@@ -1,112 +1,108 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
+  font-family: Arial, sans-serif; /* Define a fonte usada para o texto no corpo da página */
+  margin: 0; /* Remove a margem padrão do corpo da página */
+  padding: 0; /* Remove o preenchimento padrão do corpo da página */
+  background-color: #f4f4f4; /* Define a cor de fundo do corpo da página */
 }
 
 .header {
-  background-color: #333;
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
-}
-
-.img-container{
-  
+  background-color: #333; /* Define a cor de fundo do cabeçalho */
+  color: #fff; /* Define a cor do texto no cabeçalho */
+  padding: 1rem; /* Adiciona um preenchimento interno ao cabeçalho */
+  text-align: center; /* Centraliza o texto no cabeçalho */
 }
 
 .header h1 {
-  margin: 0;
+  margin: 0; /* Remove a margem padrão do elemento h1 dentro do cabeçalho */
 }
 
 .navbar {
-  margin-top: 1rem;
+  margin-top: 1rem; /* Adiciona uma margem superior à barra de navegação */
 }
 
 .navbar a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 1rem;
-  font-size: 1.2rem;
+  color: #fff; /* Define a cor do texto nos links da barra de navegação */
+  text-decoration: none; /* Remove a decoração de link (sublinhado) */
+  margin: 0 1rem; /* Adiciona margem aos links na barra de navegação */
+  font-size: 1.2rem; /* Define o tamanho da fonte dos links na barra de navegação */
 }
 
 .navbar a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Adiciona um sublinhado ao passar o mouse sobre os links na barra de navegação */
 }
 
 .projects {
-  padding: 2rem;
-  text-align: center;
+  padding: 2rem; /* Adiciona um preenchimento interno à seção de projetos */
+  text-align: center; /* Centraliza o texto na seção de projetos */
 }
 
 .projects h2 {
-  margin-bottom: 2rem;
-  font-size: 2rem;
+  margin-bottom: 2rem; /* Adiciona uma margem inferior ao título h2 na seção de projetos */
+  font-size: 2rem; /* Define o tamanho da fonte do título h2 na seção de projetos */
 }
 
 .project-list {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  list-style: none; /* Remove os marcadores de lista (pontos) da lista de projetos */
+  padding: 0; /* Remove o preenchimento padrão da lista de projetos */
+  display: flex; /* Define o layout da lista como flexível (permite alinhamento flexível) */
+  justify-content: center; /* Centraliza os itens da lista */
+  flex-wrap: wrap; /* Permite que os itens da lista se envolvam em várias linhas */
 }
 
 .project {
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin: 1rem;
-  padding: 1rem;
-  max-width: 300px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff; /* Define a cor de fundo dos projetos */
+  border: 1px solid #ccc; /* Adiciona uma borda ao redor dos projetos */
+  border-radius: 5px; /* Adiciona bordas arredondadas aos projetos */
+  margin: 1rem; /* Adiciona uma margem entre os projetos */
+  padding: 1rem; /* Adiciona um preenchimento interno aos projetos */
+  max-width: 300px; /* Define a largura máxima dos projetos */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao redor dos projetos */
 }
 
 .project h3 {
-  margin-top: 0;
+  margin-top: 0; /* Remove a margem superior do título h3 dentro dos projetos */
 }
 
 .project p {
-  margin-bottom: 1rem;
+  margin-bottom: 1rem; /* Adiciona uma margem inferior aos parágrafos dentro dos projetos */
 }
 
 .contact {
-  background-color: #f8f8f8;
-  padding: 2rem;
-  text-align: center;
+  background-color: #f8f8f8; /* Define a cor de fundo da seção de contato */
+  padding: 2rem; /* Adiciona um preenchimento interno à seção de contato */
+  text-align: center; /* Centraliza o texto na seção de contato */
 }
 
 .contact form {
-  max-width: 500px;
-  margin: 0 auto;
+  max-width: 500px; /* Define a largura máxima do formulário de contato */
+  margin: 0 auto; /* Centraliza o formulário na seção de contato */
 }
 
 .contact form input,
 .contact form textarea {
-  width: 100%;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  width: 100%; /* Define a largura total dos campos de entrada no formulário */
+  padding: 0.5rem; /* Adiciona um preenchimento interno aos campos de entrada */
+  margin-bottom: 1rem; /* Adiciona uma margem inferior aos campos de entrada */
+  border: 1px solid #ccc; /* Adiciona uma borda ao redor dos campos de entrada */
+  border-radius: 5px; /* Adiciona bordas arredondadas aos campos de entrada */
 }
 
 .contact form button {
-  background-color: #333;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
+  background-color: #333; /* Define a cor de fundo do botão de envio do formulário */
+  color: #fff; /* Define a cor do texto no botão de envio do formulário */
+  padding: 0.5rem 1rem; /* Adiciona um preenchimento interno ao botão de envio do formulário */
+  border: none; /* Remove a borda do botão de envio do formulário */
+  border-radius: 5px; /* Adiciona bordas arredondadas ao botão de envio do formulário */
+  cursor: pointer; /* Altera o cursor para um ponteiro quando passa sobre o botão de envio */
+  font-size: 1rem; /* Define o tamanho da fonte do texto no botão de envio */
 }
 
 .contact form button:hover {
-  background-color: #555;
+  background-color: #555; /* Define a cor de fundo quando o botão de envio é destacado */
 }
 
 footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex; /* Define o layout do rodapé como flexível (permite alinhamento flexível) */
+  align-items: center; /* Alinha os itens verticalmente no centro do rodapé */
+  justify-content: center; /* Centraliza os itens do rodapé horizontalmente */
 }
