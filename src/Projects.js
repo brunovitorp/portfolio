@@ -2,9 +2,9 @@ import React from 'react';
 
 function Projects() {
   const projects = [
-    { title: 'Projeto 1', description: 'Descrição do Projeto 1' },
-    { title: 'Projeto 2', description: 'Descrição do Projeto 2' },
-    { title: 'Projeto 3', description: 'Descrição do Projeto 3' },
+    { title: 'Calculadora', description: 'Descrição do Projeto 1' },
+    { title: 'Alcool ou Gasolina', description: 'Descrição do Projeto 2' },
+    { title: 'IMC', description: 'Descrição do Projeto 3' },
   ];
 
   return (
