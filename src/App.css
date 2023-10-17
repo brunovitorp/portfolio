@@ -6,10 +6,14 @@ body {
 }
 
 .header {
+  display: flex;
+  align-items: center;
   background-color: #333; /* Define a cor de fundo do cabeçalho */
   color: #fff; /* Define a cor do texto no cabeçalho */
   padding: 1rem; /* Adiciona um preenchimento interno ao cabeçalho */
   text-align: center; /* Centraliza o texto no cabeçalho */
+  justify-content: center;
+  flex-direction: column;
 }
 
 .header h1 {
@@ -105,4 +109,10 @@ footer {
   display: flex; /* Define o layout do rodapé como flexível (permite alinhamento flexível) */
   align-items: center; /* Alinha os itens verticalmente no centro do rodapé */
   justify-content: center; /* Centraliza os itens do rodapé horizontalmente */
+}
+
+.logo-container{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
