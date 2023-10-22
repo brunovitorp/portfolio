@@ -1,0 +1,35 @@
+[
+    {
+      "titulo": "Sistema de Gerenciamento de Tarefas",
+      "descricao": "Um aplicativo web que permite aos usuários criar, editar e gerenciar suas tarefas diárias. Possui funcionalidades de categorização, priorização e notificações por e-mail."
+    },
+    {
+      "titulo": "Aplicativo de Reservas de Hotéis",
+      "descricao": "Um aplicativo móvel que permite aos usuários buscar, visualizar e reservar quartos de hotel em diversas cidades. Inclui integração com APIs de pagamento para processar transações."
+    },
+    {
+      "titulo": "Plataforma de Educação Online",
+      "descricao": "Uma plataforma de aprendizado online que oferece cursos em uma variedade de tópicos. Inclui funcionalidades de registro de usuários, progresso de curso e certificados de conclusão."
+    },
+    {
+      "titulo": "Rede Social para Amantes de Livros",
+      "descricao": "Uma rede social onde os usuários podem compartilhar, avaliar e discutir livros. Inclui funcionalidades de recomendação personalizada e sistema de amigos."
+    },
+    {
+      "titulo": "Sistema de Pedidos de Restaurantes",
+      "descricao": "Um aplicativo que permite aos clientes visualizar o menu de um restaurante, fazer pedidos e efetuar pagamentos online. Também inclui uma interface para os funcionários do restaurante gerenciarem os pedidos."
+    },
+    {
+      "titulo": "Aplicativo de Controle de Despesas",
+      "descricao": "Um aplicativo móvel que ajuda os usuários a rastrear e categorizar suas despesas diárias. Gera relatórios e gráficos para visualizar os padrões de gastos."
+    },
+    {
+      "titulo": "Plataforma de Streaming de Música",
+      "descricao": "Um serviço de streaming de música que oferece um vasto catálogo de músicas e playlists personalizadas para os usuários. Inclui funcionalidades de recomendação com base nos gostos musicais."
+    },
+    {
+      "titulo": "Sistema de Reservas de Passagens Aéreas",
+      "descricao": "Um aplicativo web que permite aos usuários buscar, selecionar e reservar passagens aéreas para diferentes destinos. Inclui funcionalidades de filtragem por preço, horário e companhia aérea."
+    }
+  ]
+  
