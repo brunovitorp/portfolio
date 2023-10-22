@@ -4,6 +4,7 @@ import Projects from './Projects';
 import Contact from './Contact';
 import Footer from './Footer';
 import './App.css';
+import Saudacao from './Saudacao';
 
 function App() {
   return (
