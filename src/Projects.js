@@ -1,20 +1,29 @@
 import React from 'react';
 
+// Definindo um componente funcional chamado Projects
 function Projects() {
-  const projects = [
-    { title: 'Calculadora', description: 'Descrição do Projeto 1' },
-    { title: 'Alcool ou Gasolina', description: 'Descrição do Projeto 2' },
-    { title: 'IMC', description: 'Descrição do Projeto 3' },
+  // Criando um array de objetos chamado 'projects'
+  const projetos = [
+    { titulo: 'Calculadora', descricao: 'Descrição do Projeto 1' },
+    { titulo: 'Alcool ou Gasolina', descricao: 'Descrição do Projeto 2' },
+    { titulo: 'IMC', descricao: 'Descrição do Projeto 3' },
   ];
 
+  // O componente retorna JSX, representando a seção de projetos
   return (
     <section id="projects" className="projects">
+      {/* Título da seção */}
       <h2>Projetos</h2>
+      
+      {/* Lista de projetos */}
       <ul className="project-list">
-        {projects.map((project, index) => (
+        {/* Mapeando os projetos e criando um elemento <li> para cada um */}
+        {projetos.map((project, index) => (
           <li key={index} className="project">
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
+            {/* Título do projeto */}
+            <h3>{project.titulo}</h3>
+            {/* Descrição do projeto */}
+            <p>{project.descricao}</p>
           </li>
         ))}
       </ul>
@@ -22,4 +31,5 @@ function Projects() {
   );
 }
 
+// Exportando o componente Projects para que possa ser utilizado em outros arquivos
 export default Projects;
