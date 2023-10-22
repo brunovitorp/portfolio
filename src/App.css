@@ -34,41 +34,103 @@ body {
 .navbar a:hover {
   text-decoration: underline; /* Adiciona um sublinhado ao passar o mouse sobre os links na barra de navegação */
 }
-
-.projects {
-  padding: 2rem; /* Adiciona um preenchimento interno à seção de projetos */
-  text-align: center; /* Centraliza o texto na seção de projetos */
+/* Estilo para centralizar os títulos no formulário */
+.form-title {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.projects h2 {
-  margin-bottom: 2rem; /* Adiciona uma margem inferior ao título h2 na seção de projetos */
-  font-size: 2rem; /* Define o tamanho da fonte do título h2 na seção de projetos */
+/* Estilo para o formulário de cadastro de projetos */
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ 
 }
 
-.project-list {
-  list-style: none; /* Remove os marcadores de lista (pontos) da lista de projetos */
-  padding: 0; /* Remove o preenchimento padrão da lista de projetos */
-  display: flex; /* Define o layout da lista como flexível (permite alinhamento flexível) */
-  justify-content: center; /* Centraliza os itens da lista */
-  flex-wrap: wrap; /* Permite que os itens da lista se envolvam em várias linhas */
+/* Estilo para os campos de entrada no formulário */
+.form-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
-.project {
-  background-color: #fff; /* Define a cor de fundo dos projetos */
-  border: 1px solid #ccc; /* Adiciona uma borda ao redor dos projetos */
-  border-radius: 5px; /* Adiciona bordas arredondadas aos projetos */
-  margin: 1rem; /* Adiciona uma margem entre os projetos */
-  padding: 1rem; /* Adiciona um preenchimento interno aos projetos */
-  max-width: 300px; /* Define a largura máxima dos projetos */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao redor dos projetos */
+/* Estilo para o botão de criar projeto no formulário */
+.form-buttonNew {
+  background-color: #01783f;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.form-buttonEdit {
+  background-color: #f7ae4f;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
-.project h3 {
-  margin-top: 0; /* Remove a margem superior do título h3 dentro dos projetos */
+.form-buttonDelete {
+  background-color: #ff0000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
-.project p {
-  margin-bottom: 1rem; /* Adiciona uma margem inferior aos parágrafos dentro dos projetos */
+.form-button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para os cartões (cards) que contêm os projetos */
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  width: 300px; /* Defina a largura desejada para cada cartão */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+/* Estilo para o título do projeto dentro do cartão */
+.card h3 {
+  font-size: 1.2rem;
+}
+
+/* Estilo para a descrição do projeto dentro do cartão */
+.card p {
+  margin-top: 8px;
+  font-size: 1rem;
+}
+
+/* Estilo para o contêiner de botões (Editar e Excluir) dentro do cartão */
+.card-actions {
+  margin-top: 16px;
+}
+
+/* Estilo para os botões de ação (Editar e Excluir) dentro do cartão */
+.card-actions button {
+  margin-right: 8px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .contact {
