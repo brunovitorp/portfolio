@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 function Projects() {
-  // Estado para armazenar os projetos
+  // Estado para armazenar os projetos em um array, e uma função para atualizar o estado
   const [projetosFAP, setProjetos] = useState([]);
-  // Estado para armazenar os dados do novo projeto
+  // Estado para armazenar os dados do novo projeto com os campos id, titulo e descricao (vazias)
   const [novoProjetoFAP, setNovoProjeto] = useState({
     id: "",
     titulo: "",
@@ -14,7 +14,7 @@ function Projects() {
   // Função para criar ou atualizar um projeto
   const criarProjeto = () => {
     // Verifica se já existe um projeto com o mesmo nome
-    const projetoExistente = projetosFAP.find(
+    const projetoExistente = projetosFAP.find( //metodo array para busca
       (projeto) => projeto.titulo === novoProjetoFAP.titulo
     );
 
@@ -26,13 +26,13 @@ function Projects() {
     if (novoProjetoFAP.id) {
       // Se 'id' estiver presente, é uma edição
       axios
-        .put(
-          `http://localhost:3001/projetos/${novoProjetoFAP.id}`,
+        .put(//requisição para atualizar informações
+          `http://localhost:3000/projetos/${novoProjetoFAP.id}`,
           novoProjetoFAP
         )
-        .then((response) => {
+        .then((response) => {//resposta se bem sucedida a requisição :)
           console.log("Projeto atualizado:", response.data);
-          carregarProjetos();
+          carregarProjetos();//atualizara lista de projetos após a atualização
           setNovoProjeto({ id: "", titulo: "", descricao: "" }); // Limpa os campos após a edição
         })
         .catch((error) => {
@@ -41,10 +41,11 @@ function Projects() {
     } else {
       // Senão, é uma criação normal
       axios
-        .post("http://localhost:3001/projetos", novoProjetoFAP)
+        .post("http://localhost:3000/projetos", novoProjetoFAP) //requisição para enviar os dados novos ao servidor
         .then((response) => {
-          console.log("Projeto criado:", response.data);
+          console.log("Projeto criado:", response.data);//obtem os dados que foram enviados no log
           carregarProjetos();
+          setNovoProjeto({ id: "", titulo: "", descricao: "" }); // Limpa os campos após salvar
         })
         .catch((error) => {
           console.error("Erro ao criar projeto:", error);
@@ -55,7 +56,7 @@ function Projects() {
   // Função para excluir um projeto
   const excluirProjeto = (id) => {
     axios
-      .delete(`http://localhost:3001/projetos/${id}`)
+      .delete(`http://localhost:3000/projetos/${id}`)//requisição para deletar uma informação do json (pelo id)
       .then((response) => {
         console.log("Projeto excluído:", response.data);
         carregarProjetos();
@@ -68,7 +69,7 @@ function Projects() {
   // Função para carregar os projetos
   const carregarProjetos = () => {
     axios
-      .get("http://localhost:3001/projetos")
+      .get("http://localhost:3000/projetos")
       .then((response) => {
         setProjetos(response.data); // Atualiza o estado com os projetos obtidos da requisição
       })
@@ -86,24 +87,23 @@ function Projects() {
     });
   };
 
-  useEffect(() => {
+  useEffect(() => {//montagem dos componentes como efeito de reação
     carregarProjetos();
   }, []);
 
   return (
     <div>
       <h1 className="form-title">Meus Projetos</h1>
-
       <div className="form-container">
         <h2 className="form-title">Criar Novo Projeto</h2>
         <input
           className="form-input"
           type="text"
           placeholder="Nome do Projeto"
-          value={novoProjetoFAP.titulo}
+          value={novoProjetoFAP.titulo}//definindo o campo de entrada para o valor de estado
           onChange={(e) =>
             setNovoProjeto({ ...novoProjetoFAP, titulo: e.target.value })
-          }
+          }//atualiza o estado com o novo valor do campo de entrada
         />
         <input
           className="form-input"
@@ -112,7 +112,7 @@ function Projects() {
           value={novoProjetoFAP.descricao}
           onChange={(e) =>
             setNovoProjeto({ ...novoProjetoFAP, descricao: e.target.value })
-          }
+          }//atualiza o estado com o novo valor do campo de entrada
         />
         <button className="form-buttonNew" onClick={criarProjeto}>
           Criar Projeto
