@@ -178,3 +178,8 @@ footer {
   align-items: center;
   margin-bottom: 10px;
 }
+
+.imgProject{
+  height: 100px;
+  width: 100px;
+}

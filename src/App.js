@@ -1,18 +1,18 @@
 import React from 'react';
-import Header from './Header';
-import Projects from './Projects';
-import Contact from './Contact';
-import Footer from './Footer';
 import './App.css';
+import Home from './paginas/Home';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import NovaPagina from './paginas/NovaPagina';
+
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Projects />
-      <Contact />
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/paginas/NovaPagina" element={<NovaPagina/>} />
+      </Routes>
+    </Router>
   );
 }
 

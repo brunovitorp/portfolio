@@ -1,5 +1,7 @@
 import React from "react";
 import logo from "./port.png";
+import { Link } from 'react-router-dom';
+
 
 function Header() {
   return (
@@ -11,6 +13,7 @@ function Header() {
         <nav className="navbar">
           <a href="#projects">Projetos</a>
           <a href="#contact">Contato</a>
+          <Link to="/paginas/NovaPagina">Nova Página</Link>
         </nav>
     </header>
   );

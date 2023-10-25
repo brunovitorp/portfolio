@@ -27,13 +27,13 @@ function Projects() {
       // Se 'id' estiver presente, é uma edição
       axios
         .put(//requisição para atualizar informações
-          `http://localhost:3000/projetos/${novoProjetoFAP.id}`,
+          `http://localhost:3001/projetos/${novoProjetoFAP.id}`,
           novoProjetoFAP
         )
         .then((response) => {//resposta se bem sucedida a requisição :)
           console.log("Projeto atualizado:", response.data);
           carregarProjetos();//atualizara lista de projetos após a atualização
-          setNovoProjeto({ id: "", titulo: "", descricao: "" }); // Limpa os campos após a edição
+          setNovoProjeto({ id: "", titulo: "", descricao: "",preco: "", foto: "" }); // Limpa os campos após salvar
         })
         .catch((error) => {
           console.error("Erro ao atualizar projeto:", error);
@@ -41,11 +41,11 @@ function Projects() {
     } else {
       // Senão, é uma criação normal
       axios
-        .post("http://localhost:3000/projetos", novoProjetoFAP) //requisição para enviar os dados novos ao servidor
+        .post("http://localhost:3001/projetos", novoProjetoFAP) //requisição para enviar os dados novos ao servidor
         .then((response) => {
           console.log("Projeto criado:", response.data);//obtem os dados que foram enviados no log
           carregarProjetos();
-          setNovoProjeto({ id: "", titulo: "", descricao: "" }); // Limpa os campos após salvar
+          setNovoProjeto({ id: "", titulo: "", descricao: "",preco: "", foto: "" }); // Limpa os campos após salvar
         })
         .catch((error) => {
           console.error("Erro ao criar projeto:", error);
@@ -56,7 +56,7 @@ function Projects() {
   // Função para excluir um projeto
   const excluirProjeto = (id) => {
     axios
-      .delete(`http://localhost:3000/projetos/${id}`)//requisição para deletar uma informação do json (pelo id)
+      .delete(`http://localhost:3001/projetos/${id}`)//requisição para deletar uma informação do json (pelo id)
       .then((response) => {
         console.log("Projeto excluído:", response.data);
         carregarProjetos();
@@ -69,7 +69,7 @@ function Projects() {
   // Função para carregar os projetos
   const carregarProjetos = () => {
     axios
-      .get("http://localhost:3000/projetos")
+      .get("http://localhost:3001/projetos")
       .then((response) => {
         setProjetos(response.data); // Atualiza o estado com os projetos obtidos da requisição
       })
@@ -84,6 +84,8 @@ function Projects() {
       id: projeto.id,
       titulo: projeto.titulo,
       descricao: projeto.descricao,
+      preco: projeto.preco,
+      foto: projeto.foto
     });
   };
 
@@ -114,6 +116,26 @@ function Projects() {
             setNovoProjeto({ ...novoProjetoFAP, descricao: e.target.value })
           }//atualiza o estado com o novo valor do campo de entrada
         />
+        <input
+          className="form-input"
+          type="text"
+          placeholder="Preço do Projeto"
+          value={novoProjetoFAP.preco}
+          onChange={(e) =>
+            setNovoProjeto({ ...novoProjetoFAP, preco: e.target.value })
+          }//atualiza o estado com o novo valor do campo de entrada
+        />
+
+        <input
+          className="form-input"
+          type="text"
+          placeholder="Link da imagem"
+          value={novoProjetoFAP.foto}
+          onChange={(e) =>
+            setNovoProjeto({ ...novoProjetoFAP, foto: e.target.value })
+          }//atualiza o estado com o novo valor do campo de entrada
+        />
+
         <button className="form-buttonNew" onClick={criarProjeto}>
           Criar Projeto
         </button>
@@ -125,8 +147,10 @@ function Projects() {
           {Array.isArray(projetosFAP) &&
             projetosFAP.map((projetoFAP) => (
               <div className="card" key={projetoFAP.id}>
+                <img className="imgProject" src={projetoFAP.foto} alt={projetoFAP.titulo} />
                 <h3>{projetoFAP.titulo}</h3>
                 <p>{projetoFAP.descricao}</p>
+                <p>{projetoFAP.preco}</p>
                 <div className="card-actions">
                   <button
                     className="form-buttonEdit"
