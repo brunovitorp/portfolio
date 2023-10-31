@@ -4,18 +4,15 @@ import Projects from '../Projects';
 import Contact from '../Contact';
 import Footer from '../Footer'
 import '../App.css';
-
-
 function Home() {
+
   return (
-    <>    
-    <Header/>
-    <Projects/>
-    <Contact/>
-    <Footer/>
+    <>
+     <Header/>
+      <Projects/>
+      <Contact/>
+      <Footer/>
     </>
-
-
   );
 }
 

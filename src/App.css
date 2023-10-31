@@ -183,3 +183,13 @@ footer {
   height: 100px;
   width: 100px;
 }
+
+.search-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.search{
+  height: 30px;
+}

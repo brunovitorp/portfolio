@@ -6,6 +6,27 @@
       "descricao": "alksjdlaksjd",
       "preco": "alksdjalksdj",
       "foto": "https://static.wixstatic.com/media/c7fba5_24fb496c15c14ea88ef6dccd189d8347~mv2.png/v1/fill/w_640,h_640,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/c7fba5_24fb496c15c14ea88ef6dccd189d8347~mv2.png"
+    },
+    {
+      "id": 2,
+      "titulo": "Charmander",
+      "descricao": "Charmander é um pokemon....",
+      "preco": "- FOGO - ",
+      "foto": "https://i.pinimg.com/originals/f2/95/76/f295769d9bd3c34ffc552e837f5304ae.png"
+    },
+    {
+      "id": 3,
+      "titulo": "Linux",
+      "descricao": "Melhor S.O",
+      "preco": "Free",
+      "foto": "https://bellard.org/bpg/2.png"
+    },
+    {
+      "id": 4,
+      "titulo": "Projeto Exemplo",
+      "descricao": "Exemplo",
+      "preco": "Exemplo",
+      "foto": "https://onlinepngtools.com/images/examples-onlinepngtools/sunset-frame-5.png"
     }
   ]
 }

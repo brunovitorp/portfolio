@@ -1,8 +1,13 @@
 import React from 'react'
+import Header from '../Header';
 
 function NovaPagina() {
   return (
-    <div>NovaPagina</div>
+    <>
+    <Header/>
+    </>
+      
+  
   )
 }
 

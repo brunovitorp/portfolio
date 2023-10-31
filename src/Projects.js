@@ -11,6 +11,9 @@ function Projects() {
     descricao: "",
   });
 
+  const [buscarProjeto, setBuscarProjeto] = useState("");
+
+
   // Função para criar ou atualizar um projeto
   const criarProjeto = () => {
     // Verifica se já existe um projeto com o mesmo nome
@@ -89,6 +92,12 @@ function Projects() {
     });
   };
 
+    // Filtrar os projetos com base no termo de pesquisa
+    const projetosFiltrados = projetosFAP.filter(projeto => 
+      projeto.titulo.toLowerCase().includes(buscarProjeto.toLowerCase())
+    );
+  
+
   useEffect(() => {//montagem dos componentes como efeito de reação
     carregarProjetos();
   }, []);
@@ -142,10 +151,19 @@ function Projects() {
       </div>
 
       <div>
+        <div className="search-container">
         <h2 className="form-title">Meus Projetos</h2>
+        <input 
+        className="search"
+        type="text"
+        placeholder="Pesquisar por título"
+        value={buscarProjeto}
+        onChange={e => setBuscarProjeto(e.target.value)}
+      />
+      </div>
         <div className="card-container">
-          {Array.isArray(projetosFAP) &&
-            projetosFAP.map((projetoFAP) => (
+          {Array.isArray(projetosFiltrados) &&
+            projetosFiltrados.map((projetoFAP) => (
               <div className="card" key={projetoFAP.id}>
                 <img className="imgProject" src={projetoFAP.foto} alt={projetoFAP.titulo} />
                 <h3>{projetoFAP.titulo}</h3>
