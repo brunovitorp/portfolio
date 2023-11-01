@@ -193,3 +193,8 @@ footer {
 .search{
   height: 30px;
 }
+
+.darkMode{
+  background-color: black;
+  color: white;
+}

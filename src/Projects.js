@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+
 function Projects() {
   // Estado para armazenar os projetos em um array, e uma função para atualizar o estado
   const [projetosFAP, setProjetos] = useState([]);
@@ -12,6 +13,7 @@ function Projects() {
   });
 
   const [buscarProjeto, setBuscarProjeto] = useState("");
+  // Estado para armazenar a busca dos projetos em um array, e uma função para atualizar o estado
 
 
   // Função para criar ou atualizar um projeto
@@ -153,6 +155,9 @@ function Projects() {
       <div>
         <div className="search-container">
         <h2 className="form-title">Meus Projetos</h2>
+
+        {/* campo de pesquisa para filtrar pelo nome do projeto */}
+        
         <input 
         className="search"
         type="text"
