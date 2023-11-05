@@ -7,7 +7,7 @@ import NovaPagina from './paginas/NovaPagina';
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/paginas/NovaPagina" element={<NovaPagina/>} />
