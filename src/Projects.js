@@ -10,6 +10,8 @@ function Projects() {
     id: "",
     titulo: "",
     descricao: "",
+    preco:"",
+    foto:"",
   });
 
   const [buscarProjeto, setBuscarProjeto] = useState("");

@@ -16,7 +16,7 @@
     },
     {
       "id": 3,
-      "titulo": "Linux",
+      "titulo": "LinuxA",
       "descricao": "Melhor S.O",
       "preco": "Free",
       "foto": "https://bellard.org/bpg/2.png"
@@ -26,13 +26,6 @@
       "titulo": "Projeto Exemplo",
       "descricao": "Exemplo",
       "preco": "Exemplo",
-      "foto": "https://onlinepngtools.com/images/examples-onlinepngtools/sunset-frame-5.png"
-    },
-    {
-      "id": 5,
-      "titulo": "Anderson",
-      "descricao": "Projeto Sol",
-      "preco": "0",
       "foto": "https://onlinepngtools.com/images/examples-onlinepngtools/sunset-frame-5.png"
     }
   ]
