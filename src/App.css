@@ -171,6 +171,8 @@ footer {
   display: flex; /* Define o layout do rodapé como flexível (permite alinhamento flexível) */
   align-items: center; /* Alinha os itens verticalmente no centro do rodapé */
   justify-content: center; /* Centraliza os itens do rodapé horizontalmente */
+  bottom: 0;
+  width: 100%;
 }
 
 .logo-container{

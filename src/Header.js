@@ -39,9 +39,9 @@ function Header() {
         <h1>Meu Portfólio</h1>
       </div>
       <nav className="navbar">
-        <a href="#projects">Projetos</a>
-        <a href="#contact">Contato</a>
-        <Link to="/paginas/NovaPagina">Nova Página</Link>
+        <Link to="/">Projetos</Link>
+        <Link to="/">Contato</Link>
+        <Link to="/paginas/TContatos">Contatos</Link>
         <button className="btndark" alt="" onClick={dark}>
           Dark
         </button>

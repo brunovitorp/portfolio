@@ -34,7 +34,7 @@ function Projects() {
       // Se 'id' estiver presente, é uma edição
       axios
         .put(//requisição para atualizar informações
-          `http://localhost:3001/projetos/${novoProjetoFAP.id}`,
+          `http://localhost:3002/projetos/${novoProjetoFAP.id}`,
           novoProjetoFAP
         )
         .then((response) => {//resposta se bem sucedida a requisição :)
@@ -48,7 +48,7 @@ function Projects() {
     } else {
       // Senão, é uma criação normal
       axios
-        .post("http://localhost:3001/projetos", novoProjetoFAP) //requisição para enviar os dados novos ao servidor
+        .post("http://localhost:3002/projetos", novoProjetoFAP) //requisição para enviar os dados novos ao servidor
         .then((response) => {
           console.log("Projeto criado:", response.data);//obtem os dados que foram enviados no log
           carregarProjetos();
@@ -63,7 +63,7 @@ function Projects() {
   // Função para excluir um projeto
   const excluirProjeto = (id) => {
     axios
-      .delete(`http://localhost:3001/projetos/${id}`)//requisição para deletar uma informação do json (pelo id)
+      .delete(`http://localhost:3002/projetos/${id}`)//requisição para deletar uma informação do json (pelo id)
       .then((response) => {
         console.log("Projeto excluído:", response.data);
         carregarProjetos();
@@ -76,7 +76,7 @@ function Projects() {
   // Função para carregar os projetos
   const carregarProjetos = () => {
     axios
-      .get("http://localhost:3001/projetos")
+      .get("http://localhost:3002/projetos")
       .then((response) => {
         setProjetos(response.data); // Atualiza o estado com os projetos obtidos da requisição
       })
