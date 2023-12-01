@@ -16,6 +16,7 @@ function Projects() {
 
   const [buscarProjeto, setBuscarProjeto] = useState("");
   // Estado para armazenar a busca dos projetos em um array, e uma função para atualizar o estado
+  
 
 
   // Função para criar ou atualizar um projeto

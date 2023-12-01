@@ -136,16 +136,18 @@ body {
 .contact {
   background-color: #f8f8f8; /* Define a cor de fundo da seção de contato */
   padding: 2rem; /* Adiciona um preenchimento interno à seção de contato */
-  text-align: center; /* Centraliza o texto na seção de contato */
+}
+.titulo{
+  text-align: center; 
 }
 
-.contact form {
+.contact{
   max-width: 500px; /* Define a largura máxima do formulário de contato */
   margin: 0 auto; /* Centraliza o formulário na seção de contato */
 }
 
-.contact form input,
-.contact form textarea {
+.contact input,
+.contact textarea {
   width: 100%; /* Define a largura total dos campos de entrada no formulário */
   padding: 0.5rem; /* Adiciona um preenchimento interno aos campos de entrada */
   margin-bottom: 1rem; /* Adiciona uma margem inferior aos campos de entrada */
@@ -200,3 +202,9 @@ footer {
   background-color: black;
   color: white;
 }
+
+.callContainer{
+  display: flex;
+  gap: 10px;
+}
+
