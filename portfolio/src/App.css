@@ -1,0 +1,211 @@
+body {
+  font-family: Arial, sans-serif; /* Define a fonte usada para o texto no corpo da página */
+  margin: 0; /* Remove a margem padrão do corpo da página */
+  padding: 0; /* Remove o preenchimento padrão do corpo da página */
+  background-color: #f4f4f4; /* Define a cor de fundo do corpo da página */
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #333; /* Define a cor de fundo do cabeçalho */
+  color: #fff; /* Define a cor do texto no cabeçalho */
+  padding: 1rem; /* Adiciona um preenchimento interno ao cabeçalho */
+  text-align: center; /* Centraliza o texto no cabeçalho */
+  justify-content: center;
+  flex-direction: column;
+}
+
+.header h1 {
+  margin: 0; /* Remove a margem padrão do elemento h1 dentro do cabeçalho */
+}
+
+.navbar {
+  margin-top: 1rem; /* Adiciona uma margem superior à barra de navegação */
+}
+
+.navbar a {
+  color: #fff; /* Define a cor do texto nos links da barra de navegação */
+  text-decoration: none; /* Remove a decoração de link (sublinhado) */
+  margin: 0 1rem; /* Adiciona margem aos links na barra de navegação */
+  font-size: 1.2rem; /* Define o tamanho da fonte dos links na barra de navegação */
+}
+
+.navbar a:hover {
+  text-decoration: underline; /* Adiciona um sublinhado ao passar o mouse sobre os links na barra de navegação */
+}
+/* Estilo para centralizar os títulos no formulário */
+.form-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Estilo para o formulário de cadastro de projetos */
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ 
+}
+
+/* Estilo para os campos de entrada no formulário */
+.form-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Estilo para o botão de criar projeto no formulário */
+.form-buttonNew {
+  background-color: #01783f;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.form-buttonEdit {
+  background-color: #f7ae4f;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.form-buttonDelete {
+  background-color: #ff0000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.form-button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para os cartões (cards) que contêm os projetos */
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  width: 300px; /* Defina a largura desejada para cada cartão */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  
+}
+
+/* Estilo para o título do projeto dentro do cartão */
+.card h3 {
+  font-size: 1.2rem;
+}
+
+/* Estilo para a descrição do projeto dentro do cartão */
+.card p {
+  margin-top: 8px;
+  font-size: 1rem;
+}
+
+/* Estilo para o contêiner de botões (Editar e Excluir) dentro do cartão */
+.card-actions {
+  margin-top: 16px;
+}
+
+/* Estilo para os botões de ação (Editar e Excluir) dentro do cartão */
+.card-actions button {
+  margin-right: 8px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact {
+  background-color: #f8f8f8; /* Define a cor de fundo da seção de contato */
+  padding: 2rem; /* Adiciona um preenchimento interno à seção de contato */
+}
+.titulo{
+  text-align: center; 
+}
+
+.contact{
+  max-width: 500px; /* Define a largura máxima do formulário de contato */
+  margin: 0 auto; /* Centraliza o formulário na seção de contato */
+}
+
+.contact input,
+.contact textarea {
+  width: 100%; /* Define a largura total dos campos de entrada no formulário */
+  padding: 0.5rem; /* Adiciona um preenchimento interno aos campos de entrada */
+  margin-bottom: 1rem; /* Adiciona uma margem inferior aos campos de entrada */
+  border: 1px solid #ccc; /* Adiciona uma borda ao redor dos campos de entrada */
+  border-radius: 5px; /* Adiciona bordas arredondadas aos campos de entrada */
+}
+
+.contact form button {
+  background-color: #333; /* Define a cor de fundo do botão de envio do formulário */
+  color: #fff; /* Define a cor do texto no botão de envio do formulário */
+  padding: 0.5rem 1rem; /* Adiciona um preenchimento interno ao botão de envio do formulário */
+  border: none; /* Remove a borda do botão de envio do formulário */
+  border-radius: 5px; /* Adiciona bordas arredondadas ao botão de envio do formulário */
+  cursor: pointer; /* Altera o cursor para um ponteiro quando passa sobre o botão de envio */
+  font-size: 1rem; /* Define o tamanho da fonte do texto no botão de envio */
+}
+
+.contact form button:hover {
+  background-color: #555; /* Define a cor de fundo quando o botão de envio é destacado */
+}
+
+footer {
+  display: flex; /* Define o layout do rodapé como flexível (permite alinhamento flexível) */
+  align-items: center; /* Alinha os itens verticalmente no centro do rodapé */
+  justify-content: center; /* Centraliza os itens do rodapé horizontalmente */
+  bottom: 0;
+  width: 100%;
+}
+
+.logo-container{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.imgProject{
+  height: 100px;
+  width: 100px;
+}
+
+.search-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.search{
+  height: 30px;
+}
+
+.darkMode{
+  background-color: black;
+  color: white;
+}
+
+.callContainer{
+  display: flex;
+  gap: 10px;
+}
+
